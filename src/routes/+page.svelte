@@ -178,17 +178,10 @@
         font-size: 1.2em;
     }
     
-    .info-right {
-        text-align: right;
-    }
-    
     .info > div {
         display: flex;
+	flex-direction: row;
         gap: 2rem;
-    }
-    
-    .info-right > div {
-        flex-direction: row-reverse
     }
     
     .info > div > div {
@@ -200,6 +193,20 @@
         display: flex;
         justify-content: center;
         align-items: center;
+    }
+
+    @media (min-width: 1024px) {
+        .info > div {
+            flex-direction: column;
+	}
+
+	.info-right {
+            text-align: right;
+	}
+
+	.info-right > div {
+            flex-direction: row-reverse;
+	}
     }
 </style>
 
